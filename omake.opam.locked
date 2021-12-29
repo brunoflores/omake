@@ -1,0 +1,20 @@
+opam-version: "2.0"
+name: "omake"
+version: "0.1.0"
+synopsis: "A build system"
+maintainer: "Bruno Flores <bruno@brunoflores.com.br>"
+authors: "Bruno Flores <bruno@brunoflores.com.br>"
+license: "Apache-2.0"
+homepage: "https://github.com/brunoflores/omake"
+bug-reports: "https://github.com/brunoflores/omake/issues"
+depends: [
+  "base-bigarray" {= "base"}
+  "base-threads" {= "base"}
+  "base-unix" {= "base"}
+  "ocaml" {= "4.13.1"}
+  "ocaml-base-compiler" {= "4.13.1"}
+  "ocaml-config" {= "2"}
+  "ocaml-options-vanilla" {= "1"}
+  "ocamlfind" {= "1.9.1"}
+]
+build: ["dune" "build" "-p" name "-j" jobs]
